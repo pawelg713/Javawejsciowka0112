@@ -1,7 +1,33 @@
-public interface WzimQueue<t> {
-    public boolean ad(final t e);
+package pl.sggw;
 
-    public boolean offer(final t e);
+/**
+ Capacity-restricted Queue
+ @see <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html">Queue</a>
+ */
 
-    public void remove();
+public interface WzimQueue<E> {
+
+    public boolean add(final E e);
+
+    public boolean offer(final E e);
+
+    public E remove();
+
+    public E poll();
+
+    public E element();
+
+    public E peek();
+
+    /**
+     *
+     * @return current size
+     */
+    public int size();
+
+    /**
+     *
+     * @return maximum number of elements that this queue can hold
+     */
+    public int capacity();
 }
